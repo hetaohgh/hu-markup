@@ -5,7 +5,30 @@ body {
 	-moz-osx-font-smoothing: grayscale;
   }
 
-  img {
+h2 {
+  font-size: 20px;
+  font-weight: 5px;
+  color: #dbdbdb;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+  background-color: #444444;
+}
+
+h3 {
+  font-size: 18px;
+  color: grey;
+  font-family: 'Roboto Slab', serif;
+}
+
+h4 {
+  margin: 3px auto;
+  font-size: 14px;
+  line-height: 17px;
+  color: #444444;
+  text-align: right;
+}
+
+img {
   	width: 100%
   }
 
@@ -16,22 +39,61 @@ body {
   }
 
   .headline {
-  	font-size: 80px;
-  	line-height: 95px;
+  	font-size: 60px;
+  	line-height: 65px;
   	color: black;
-  	margin: 50px auto;
+  	margin: 30px auto;
   	font-family: Lato;
   }
   
   .body {
   	font-family: Georgia;
-  	font-size: 22px;
-  	line-height: 25px;
+  	font-size: 18px;
+  	line-height: 22px;
   }
 
   .caption {
   	margin: 3px auto;
-  	font-size: 15px;
-  	line-height: 18px;
+  	font-size: 14px;
+  	line-height: 17px;
 
   }
+
+  @import url(http://fonts.googleapis.com/css?family=Istok+Web);
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+* {
+  box-sizing: border-box;
+}
+body, figure { 
+  margin: 0; background: #e5e5e5;
+  font-family: Istok Web, sans-serif;
+  font-weight: 100;
+}
+div#captioned-gallery { 
+  width: 100%; overflow: hidden; 
+}
+figure.slider { 
+  position: relative; width: 500%;
+  font-size: 0; animation: 19s slidy infinite; 
+}
+figure.slider figure { 
+  width: 20%; height: auto;
+  display: inline-block;  position: inherit; 
+}
+figure.slider img { width: 100%; height: auto; }
+figure.slider figure figcaption { 
+  position: absolute; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  color: #fff; width: 100%;
+  font-size: 12px; padding: 15px; 
+}
